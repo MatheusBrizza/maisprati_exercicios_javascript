@@ -1,0 +1,300 @@
+// Manipulação de Objetos
+// 1. Acessando Propriedades de Objetos
+// ○ Objetivo: Crie um objeto carro com propriedades como marca, modelo,
+// ano, e cor. Use for in para iterar sobre as propriedades e exibir seus
+// valores no console.
+
+let carro = {
+    marca: "Fiat",
+    modelo: "Uno",
+    ano: 1995,
+    cor: "Roxo"
+};
+
+for (let att in carro) {
+    console.log(`${att}: ${carro[att]}`);
+}
+
+
+// 2. Verificando Propriedades
+// ○ Objetivo: Crie um objeto livro com propriedades titulo, autor,
+// anoPublicacao e genero. Verifique se a propriedade editora existe no
+// objeto usando for in. Se não existir, adicione essa propriedade ao objeto.
+
+let livro = {
+    titulo: "A história dos pingos",
+    autor: "Mary e Eliardo França ,Mary e Eliardo França ",
+    anoPublicacao: 1995,
+    genero: "Infantil"
+};
+
+if (!("editora" in livro)) {
+    livro.editora = "GLOBAL";
+}
+
+console.log(livro);
+
+
+// 3. Filtrando Propriedades de Objetos
+// ○ Objetivo: Dado um objeto produto com várias propriedades, crie uma
+// função que retorna um novo objeto contendo apenas as propriedades cujo
+// valor seja maior que um valor específico. Use for in para filtrar as
+// propriedades.
+
+let produto = {
+    nome: "Cadeira",
+    preco: 150,
+    estoque: 30,
+    vendas: 5
+};
+
+function filtrarPropriedades(objeto, valorMinimo) {
+    let novoObjeto = {};
+    for (let att in objeto) {
+        if (objeto[att] > valorMinimo) {
+            novoObjeto[att] = objeto[att];
+        }
+    }
+    return novoObjeto;
+}
+
+console.log(filtrarPropriedades(produto, 10));
+
+
+// Manipulação de Arrays de Objetos com for of
+// 4. Iterando Sobre Arrays de Objetos
+// ○ Objetivo: Crie um array de objetos pessoas, onde cada objeto representa
+// uma pessoa com nome, idade, e cidade. Use for of para exibir as
+// informações de cada pessoa no console.
+
+let pessoas = [
+    { nome: "Ana", idade: 25, cidade: "São Paulo" },
+    { nome: "Pedro", idade: 30, cidade: "Rio de Janeiro" },
+    { nome: "João", idade: 22, cidade: "Curitiba" }
+];
+
+for (let pessoa of pessoas) {
+    console.log(`${pessoa.nome} tem ${pessoa.idade} anos e mora em ${pessoa.cidade}.`);
+}
+
+
+// 5. Calculando Valores em Arrays de Objetos
+// ○ Objetivo: Crie um array de objetos alunos, cada um com propriedades
+// nome, nota1, e nota2. Use for of para calcular a média das notas de cada
+// aluno e exibir o nome do aluno junto com sua média.
+
+let alunos = [
+    { nome: "Carlos", nota1: 8, nota2: 7 },
+    { nome: "Maria", nota1: 9, nota2: 8 },
+    { nome: "José", nota1: 6, nota2: 5 }
+];
+
+for (let aluno of alunos) {
+    let media = (aluno.nota1 + aluno.nota2) / 2;
+    console.log(`${aluno.nome} tem média ${media}.`);
+}
+
+
+// 6. Filtrando Arrays de Objetos
+// ○ Objetivo: Crie um array de objetos funcionarios, onde cada objeto
+// contém informações como nome, cargo, e salario. Use for of para filtrar
+// e exibir apenas os funcionários cujo salário seja maior que um valor
+// específico.
+
+let funcionarios = [
+    { nome: "Lucas", cargo: "Gerente", salario: 5000 },
+    { nome: "Paula", cargo: "Analista", salario: 3000 },
+    { nome: "Roberto", cargo: "Desenvolvedor", salario: 4000 }
+];
+
+for (let funcionario of funcionarios) {
+    if (funcionario.salario > 3500) {
+        console.log(funcionario.nome);
+    }
+}
+
+
+// Manipulação de Arrays de Objetos com forEach
+// 7. Modificando Objetos em um Array
+// ○ Objetivo: Crie um array de objetos produtos, onde cada objeto tem nome,
+// preco, e desconto. Use forEach para aplicar um desconto de 10% em todos
+// os produtos e exibir o novo preço.
+
+let produtos = [
+    { nome: "Teclado", preco: 100, desconto: 0 },
+    { nome: "Mouse", preco: 50, desconto: 0 },
+    { nome: "Monitor", preco: 300, desconto: 0 }
+];
+
+produtos.forEach(produto => {
+    produto.preco *= 0.9;
+    console.log(`Novo preço do ${produto.nome}: R$ ${produto.preco}`);
+});
+
+
+// 8. Criando Novos Arrays a Partir de Objetos
+// ○ Objetivo: Crie um array de objetos filmes, onde cada filme tem titulo,
+// diretor, e anoLancamento. Use forEach para criar um novo array
+// contendo apenas os títulos dos filmes.
+
+let filmes = [
+    { titulo: "O Senhor dos Anéis", diretor: "Peter Jackson", anoLancamento: 2001 },
+    { titulo: "Matrix", diretor: "Wachowskis", anoLancamento: 1999 },
+    { titulo: "Interestelar", diretor: "Christopher Nolan", anoLancamento: 2014 }
+];
+
+let titulos = [];
+filmes.forEach(filme => titulos.push(filme.titulo));
+
+console.log(titulos);
+
+
+// 9. Contabilizando Elementos com uma Condição
+// ○ Objetivo: Crie um array de objetos clientes, cada um com propriedades
+// nome, idade, e cidade. Use forEach para contar quantos clientes têm mais
+// de 30 anos.
+
+let clientes = [
+    { nome: "Carla", idade: 28, cidade: "Salvador" },
+    { nome: "Bruno", idade: 32, cidade: "Fortaleza" },
+    { nome: "Lucia", idade: 45, cidade: "Belo Horizonte" }
+];
+
+let contador = 0;
+clientes.forEach(cliente => {
+    if (cliente.idade > 30) {
+        contador++;
+    }
+});
+
+console.log(`${contador} clientes têm mais de 30 anos.`);
+
+
+// Combinação de Estruturas
+// 10. Criando Relatórios com Objetos e Arrays
+// ○ Objetivo: Crie um array de objetos vendas, onde cada objeto tem produto,
+// quantidade e valor. Use forEach para calcular o valor total de vendas de
+// todos os produtos.
+
+// let vendas = [
+//     { produto: "Camisa", quantidade: 10, valor: 50 },
+//     { produto: "Calça", quantidade: 5, valor: 100 },
+//     { produto: "Tênis", quantidade: 2, valor: 300 }
+// ];
+
+// let valorTotal = 0;
+// vendas.forEach(venda => {
+//     valorTotal += venda.quantidade * venda.valor;
+// });
+
+// console.log(`Valor total das vendas: R$ ${valorTotal}`);
+
+
+// 11. Agrupando Elementos com forEach
+// ○ Objetivo: Crie um array de objetos pedidos, onde cada pedido tem
+// cliente, produto, e quantidade. Use forEach para criar um objeto que
+// agrupa a quantidade total de produtos por cliente.
+
+let pedidos = [
+    { cliente: "João", produto: "Camisa", quantidade: 3 },
+    { cliente: "Maria", produto: "Calça", quantidade: 2 },
+    { cliente: "João", produto: "Tênis", quantidade: 1 }
+];
+
+let totalProdutosPorCliente = {};
+pedidos.forEach(pedido => {
+    if (!totalProdutosPorCliente[pedido.cliente]) {
+        totalProdutosPorCliente[pedido.cliente] = 0;
+    }
+    totalProdutosPorCliente[pedido.cliente] += pedido.quantidade;
+});
+
+console.log(totalProdutosPorCliente);
+
+
+// 12. Atualizando um Array de Objetos
+// ○ Objetivo: Crie um array de objetos estoque, onde cada objeto tem
+// produto, quantidade e minimo. Use forEach para atualizar a quantidade
+// dos produtos que estão abaixo do mínimo, duplicando suas quantidades.
+
+let estoque = [
+    { produto: "Camisa", quantidade: 5, minimo: 10 },
+    { produto: "Calça", quantidade: 8, minimo: 10 },
+    { produto: "Tênis", quantidade: 2, minimo: 5 }
+];
+
+estoque.forEach(item => {
+    if (item.quantidade < item.minimo) {
+        item.quantidade *= 2;
+    }
+});
+
+console.log(estoque);
+
+
+// 13. Implementando um Carrinho de Compras
+// ○ Objetivo: Crie um objeto carrinho com uma propriedade itens, que é um
+// array de objetos. Cada objeto dentro de itens deve representar um
+// produto no carrinho, com nome, quantidade, e precoUnitario. Use forEach
+// para calcular o valor total do carrinho.
+
+let carrinho = {
+    itens: [
+        { nome: "Camisa", quantidade: 2, precoUnitario: 50 },
+        { nome: "Calça", quantidade: 1, precoUnitario: 100 },
+        { nome: "Tênis", quantidade: 1, precoUnitario: 200 }
+    ]
+};
+
+let valorTotal = 0;
+carrinho.itens.forEach(item => {
+    valorTotal += item.quantidade * item.precoUnitario;
+});
+
+console.log(`Valor total do carrinho: R$ ${valorTotal}`);
+
+
+// 14. Manipulando Objetos Complexos
+// ○ Objetivo: Crie um objeto empresa com uma propriedade departamentos,
+// que é um array de objetos. Cada departamento tem um nome e uma lista
+// de funcionarios. Use for in e for of para iterar sobre os departamentos
+// e seus funcionários, exibindo o nome de cada funcionário junto com o
+// departamento ao qual pertence.
+
+let empresa = {
+    departamentos: [
+        { nome: "Vendas", funcionarios: ["Carlos", "Ana"] },
+        { nome: "TI", funcionarios: ["Paulo", "Juliana"] },
+        { nome: "RH", funcionarios: ["Marcos", "Fernanda"] }
+    ]
+};
+
+for (let departamento of empresa.departamentos) {
+    for (let funcionario of departamento.funcionarios) {
+        console.log(`${funcionario} trabalha no departamento de ${departamento.nome}.`);
+    }
+}
+
+
+// 15. Filtrando e Somando Valores
+// ○ Objetivo: Crie um array de objetos transacoes, onde cada transação tem
+// tipo (entrada ou saída) e valor. Use forEach para calcular o saldo final,
+// somando as entradas e subtraindo as saídas.
+
+let transacoes = [
+    { tipo: "entrada", valor: 1000 },
+    { tipo: "saida", valor: 300 },
+    { tipo: "entrada", valor: 500 },
+    { tipo: "saida", valor: 200 }
+];
+
+let saldo = 0;
+transacoes.forEach(transacao => {
+    if (transacao.tipo === "entrada") {
+        saldo += transacao.valor;
+    } else if (transacao.tipo === "saida") {
+        saldo -= transacao.valor;
+    }
+});
+
+console.log(`Saldo final: R$ ${saldo}`);
