@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/atividade4/styles/reset.css">
+    <link rel="stylesheet" href="/atividade4/styles/lojas.css">
+</head>
+
+<body>
+    <header>
+        <nav class="flex-nav-container">
+            <ul class="nav-buttons">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./servicos.html">Serviços</a></li>
+                <li><a href="./testemunhos.html">Testemunhos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>LOJAS DISPONÍVEIS</h1>
+        <div class="container">
+            <div class="card" id="card1">
+                <h2 class="store-name">Banca 05 Camelódromo</h2>
+                <p class="price">R$10,00</p>
+                <p class="description">Versão clássica lançada em 2005.</p>
+                <button onclick="openForm()">COMPRAR</button>
+            </div>
+
+            <div class="card" id="card2">
+                <h2 class="store-name">Steam</h2>
+                <p class="price">R$39,99</p>
+                <p class="description">Versão HD remasterizada lançada em 2014.</p>
+                <button onclick="openForm()">COMPRAR</button>
+            </div>
+
+            <div class="card" id="card3">
+                <h2 class="store-name">Nuuvem</h2>
+                <p class="price">R$39,99</p>
+                <p class="description">Versão HD remasterizada lançada em 2014.</p>
+                <button onclick="openForm()">COMPRAR</button>
+            </div>
+
+            <div class="card" id="card4">
+                <h2 class="store-name">PlayStation Store</h2>
+                <p class="price">R$149,99</p>
+                <p class="description">Versão HD remasterizada lançada em 2014.</p>
+                <button onclick="openForm()">COMPRAR</button>
+            </div>
+
+            <div class="card" id="card5">
+                <h2 class="store-name">Xbox Store</h2>
+                <p class="price">R$156,69</p>
+                <p class="description">Versão HD remasterizada lançada em 2014.</p>
+                <button onclick="openForm()">COMPRAR</button>
+            </div>
+
+            <div class="card" id="card6">
+                <h2 class="store-name">Meta Store</h2>
+                <p class="price">USD$39,99</p>
+                <p class="description">Versão VR lançada exclusivamente para Meta Quest 2.</p>
+                <button onclick="openForm()">COMPRAR</button>
+            </div>
+        </div>
+        <div id="details-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeForm()">&times;</span>
+                <h2>Contato</h2>
+                <form id="contact-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <br>
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" required>
+                    <br>
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" required></textarea>
+                    <br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <ul class="social-media">
+                <li><a href="" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                <li><a href="" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></li>
+                <li><a href="" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+                <li><a href="" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+            </ul>
+            <div class="terms-policy">
+                <a href="./termos.html">Termos de uso</a>
+                <a href="./politica.html">Política de privacidade</a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "B0YI0Mpgp_EGFwqYG",
+            });
+        })();
+    </script>
+
+    <script src="./js/lojas.js"></script>
+</body>
+
+</html>
