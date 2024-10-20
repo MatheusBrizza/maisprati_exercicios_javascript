@@ -7,7 +7,7 @@
     <title>Serviços</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/atividade4/styles/reset.css">
-    <link rel="stylesheet" href="/atividade4/styles/lojas.css">
+    <link rel="stylesheet" href="/atividade4/styles/loja-re4remake.css">
 </head>
 
 <body>
@@ -23,27 +23,71 @@
     </header>
 
     <section>
-        <h1>LOJAS DISPONÍVEIS</h1>
+        <div class="title-container">
+            <h1 class="title">LOJAS DISPONÍVEIS</h1>
+        </div>
         <div class="container">
             <div class="card" id="card1">
-                <h2 class="product-name">Product 1</h2>
-                <p class="price">$29.99</p>
-                <p class="description">This is a great product that solves many problems.</p>
-                <button onclick="showDetails('Product 1', 'A detailed description of Product 1')">More Details</button>
+                <h2 class="store-name">Steam</h2>
+                <p class="price">R$213,00</p>
+                <p class="description">Versão gold com todas as DLC disponíveis.</p>
+                <button onclick="openForm()">COMPRAR</button>
             </div>
 
             <div class="card" id="card2">
-                <h2 class="product-name">Product 2</h2>
-                <p class="price">$49.99</p>
-                <p class="description">An amazing product with advanced features.</p>
-                <button onclick="showDetails('Product 2', 'A detailed description of Product 2')">More Details</button>
+                <h2 class="store-name">Steam</h2>
+                <p class="price">R$169,00</p>
+                <p class="description">Versão base s/DLC's</p>
+                <button onclick="openForm()">COMPRAR</button>
             </div>
 
             <div class="card" id="card3">
-                <h2 class="product-name">Product 3</h2>
-                <p class="price">$19.99</p>
-                <p class="description">A budget-friendly product with great value.</p>
-                <button onclick="showDetails('Product 3', 'A detailed description of Product 3')">More Details</button>
+                <h2 class="store-name">Nuuvem</h2>
+                <p class="price">R$169,00</p>
+                <p class="description">Versão base s/DLC's</p>
+                <button onclick="openForm()">COMPRAR</button>
+            </div>
+
+            <div class="card" id="card4">
+                <h2 class="store-name">PlayStation Store</h2>
+                <p class="price">R$199,50</p>
+                <p class="description">Versão base s/DLC's</p>
+                <button onclick="openForm()">COMPRAR</button>
+            </div>
+
+            <div class="card" id="card5">
+                <h2 class="store-name">PlayStation Store</h2>
+                <p class="price">R$249,50</p>
+                <p class="description">Versão gold com todas as DLC disponíveis.</p>
+                <button onclick="openForm()">COMPRAR</button>
+            </div>
+            
+            <div class="card" id="card6">
+                <h2 class="store-name">Xbox Store</h2>
+                <p class="price">R$196,00</p>
+                <p class="description">Versão base s/DLC's</p>
+                <button onclick="openForm()">COMPRAR</button>
+            </div>
+        </div>
+        <div id="details-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeForm()">&times;</span>
+                <h2>Contato</h2>
+                <form id="contact-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <br>
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" required>
+                    <br>
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" required></textarea>
+                    <br>
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
         </div>
     </section>
@@ -61,7 +105,17 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "B0YI0Mpgp_EGFwqYG",
+            });
+        })();
+    </script>
 
+    <script src="./js/lojas.js"></script>
 </body>
 
 </html>
