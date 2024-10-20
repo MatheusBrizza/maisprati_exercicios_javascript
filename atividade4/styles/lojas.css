@@ -43,6 +43,15 @@ header {
     color: var(--font-color);
 }
 
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title-container .title {
+    color: var(--font-color);
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas */
@@ -54,36 +63,35 @@ header {
     padding: 20px;
 }
 
-/* Styling each card */
-.card {
+.container .card {
     background-image: url("../img/4kQ8Cjuf9p4tphsJJF1LoL6USKTblw5f.avif");
     background-size: cover;
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 10px;
     width: 200px;
     text-align: center;
+    color: var(--font-color);
 }
 
-.card h2 {
+.container .card h2 {
     font-size: 20px;
     margin: 10px 0;
 }
 
-.price {
+.container .card .price {
     color: black;
     font-weight: bold;
     font-size: larger;
-    
-    
+    color: var(--font-color);
 }
 
-.description {
+.container .card .description {
     font-size: 14px;
-    color: #555;
+    font-weight: 600;
+    
 }
 
-button {
+.container button {
     background-color: #28a745;
     color: white;
     padding: 10px;
@@ -92,7 +100,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.container button:hover {
     background-color: #218838;
 }
 
