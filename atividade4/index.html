@@ -4,44 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="/atividade4/styles/reset.css">
-    <link rel="stylesheet" href="/atividade4/styles/index.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Home</title>
 </head>
 
 <body>
     <header>
-        <h1>Atividade 4</h1>
         <nav class="flex-nav-container">
-            <ul>
-                <li><a href="/atividade4/index.html">Home</a></li>
-                <li><a href="/atividade4/sobre.html">Sobre</a></li>
-                <li><a href="/atividade4/servicos.html">Serviços</a></li>
-                <li><a href="/atividade4/testemunhos.html">Testemunhos</a></li>
+            <ul class="nav-buttons">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./servicos.html">Serviços</a></li>
+                <li><a href="./testemunhos.html">Testemunhos</a></li>
             </ul>
         </nav>
-        <div>
-            <button>Login</button>
-            <input type="text" id="">Search
-        </div>
     </header>
     <section class="carrosel">
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" id="slide-1">
                     <div class="backscene"></div>
-
                     <div class="banner">
                         <div class="left">
                             <div class="features">
                                 <div class="pricing">
                                     <a href=""></a>
                                     <div class="content">
-                                        <img id="re4-classic-logo" src="/atividade4/img/resident_evil4_classic_logo.png"
+                                        <img id="re4-logo" src="./img/5b658d2a925565f0755e035597f8d22f.png"
                                             alt="Resident-evil-4-2005-logo">
                                         <p class="description">
                                             "Resident Evil 4" de 2005 revolucionou o gênero ao introduzir a câmera
@@ -51,20 +46,19 @@
                                             "The Last of Us".
                                         </p>
                                         <span class="genre">Gênero: Ação, Survival horror</span>
-                                        <a href="sobre.html">SAIBA MAIS</a>
+                                        <a href="./sobre.html">SAIBA MAIS</a>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-                        <img id="img-leon" src="img/Resident_Evil_4_-_Leon_Scott_Kennedy_with_jacket_render.webp"
-                            alt="re4-leon-img">
+                        <img id="img-leon" src="./img/Resident_Evil_4_-_Leon_Scott_Kennedy_with_jacket_render.webp"
+                            alt="re4classic-leon-img">
                         <div class="right">
                             <div class="rating">
                                 <span class="score">96</span>
                                 <div class="score-content">
                                     <span class="subtitle">M E T A S C O R E</span>
-                                    <a href="testemunhos.html">VEJA MAIS</a>
+                                    <a href="./testemunhos.html">VEJA MAIS</a>
                                 </div>
                             </div>
                             <div class="info-container">
@@ -87,62 +81,68 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- <div class="swiper-slide" id="slide-2">
-                    <img src="" alt="img pokemon">
+                </div>
+                <div class="swiper-slide" id="slide-2">
                     <div class="backscene"></div>
+
                     <div class="banner">
                         <div class="left">
                             <div class="features">
-                                <div class="rating">
-                                    <span class="score">8.3</span>
-                                    <div class="content">
-                                        <span class="subtitle">METASCORE</span>
-                                        <h4>BOM</h4>
-                                        <span>Prepare-se para uma aventura pokemon</span>
-                                    </div>
-                                </div>
                                 <div class="pricing">
-                                    <a href="" target="_blank"></a>
+                                    <a href=""></a>
                                     <div class="content">
-                                        <span class="subtitle">Pokemon legends</span>
-                                        <h4>COMPRE AGORA</h4>
-                                        <span>RPG, Ação</span>
+                                        <img id="re4-logo" src="./img/Resident_Evil_4_logo_(2023).svg.png"
+                                            alt="Resident-evil-4-2023-logo">
+                                        <p class="description">
+                                            O "Resident Evil 4 Remake" é uma reimaginação do clássico de 2005. O jogo
+                                            mantém a essência do original, como a jogabilidade de ação com câmera sobre
+                                            o ombro e combates intensos, mas traz gráficos atualizados, ambientes mais
+                                            detalhados e melhorias na mecânica. Leon S. Kennedy retorna como
+                                            protagonista, enfrentando hordas de inimigos infectados enquanto tenta
+                                            resgatar a filha do presidente dos Estados Unidos. O remake incorpora
+                                            elementos modernos, tornando a experiência mais imersiva e fiel ao legado de
+                                            survival horror da série.
+                                        </p>
+                                        <span class="genre">Gênero: Ação, Survival horror</span>
+                                        <a href="./sobre.html">SAIBA MAIS</a>
                                     </div>
                                 </div>
                             </div>
-                            <h1 class="pokemon-title">Pokemon legends</h1>
                         </div>
-                        <img src="" alt="treinador-pokemon-red" class="pokemon">
-                    </div>
-                </div> -->
-
-                    <!-- <div class="swiper-slide" id="slide-3">
-                    <img src="" alt="zelda">
-                    <div class="backscene"></div>
-                    <div class="banner">
-                        <img src="" alt="mario">
+                        <img id="img-leon" src="./img/Dfw9iq5-876781a4-d211-4caa-87e2-6fc1a1c9b2ab.webp"
+                            alt="re4remake-leon-img">
                         <div class="right">
-                            <ul class="description">
-                                <li>
-                                    <p>27 de outubro de 2017</p>
-                                </li>
-                                <li>
-                                    <p>Modo TV, modo semiportátil, modo portátil</p>
-                                </li>
-                            </ul>
+                            <div class="rating">
+                                <span class="score">93</span>
+                                <div class="score-content">
+                                    <span class="subtitle">M E T A S C O R E</span>
+                                    <a href="./testemunhos.html">VEJA MAIS</a>
+                                </div>
+                            </div>
+                            <div class="info-container">
+                                <ul class="information">
+                                    <li>
+                                        <span>Lançamento: 24 de março de 2023</span>
+                                    </li>
+                                    <li>
+                                        <p>Plataformas: Ps4, Ps5, Xbox Series X, PC, iOS</p>
+                                    </li>
+                                </ul>
+                                <a href="servicos.html">COMRAR AGORA</a>
+                            </div>
                             <div class="trailer">
-                                <h2>Assista o trailer</h2>
-                                
+                                <h2>Assista o trailer:</h2>
+                                <iframe width="1280" height="720"
+                                    src="https://www.youtube.com/embed/ITWd6NnYo0k?si=Adth9BEPat_2tmrb"
+                                    title="Resident-evil-4-Remake-2023-trailer" allowfullscreen></iframe>
                             </div>
                         </div>
-                        <h1>Mário</h1>
                     </div>
                 </div>
             </div>
-        </div> -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </section>
     <footer>
         <div class="footer-container">
@@ -159,6 +159,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/atividade4/js/app.js"></script>
 </body>
 
 </html>
