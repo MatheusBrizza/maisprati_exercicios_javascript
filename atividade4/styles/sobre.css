@@ -54,14 +54,14 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;    
+    align-items: center;
 }
 
 .titles img {
     max-width: 200px;
 }
 
-.container .re4-story, 
+.container .re4-story,
 .container .re4-remake-story {
     border: 1px solid var(--font-color);
     margin: 5px;
@@ -74,7 +74,7 @@ header {
     background: rgba(0, 0, 0, 0.6);
 }
 
-.container .re4-story p, 
+.container .re4-story p,
 .container .re4-story h1,
 .container .re4-story li,
 .container .re4-remake-story p,
@@ -87,7 +87,6 @@ footer {
     position: absolute;
     height: 15vh;
     width: 100%;
-
     bottom: 0;
 }
 
