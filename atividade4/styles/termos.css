@@ -46,123 +46,65 @@ header {
 .title-container {
     display: flex;
     justify-content: center;
-}
-
-.title-container .title {
-    font-family: var(--font);
     color: var(--font-color);
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-    gap: 20px;
-    justify-items: center;
+.terms-container {
+    display: flex;
     align-items: center;
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px;
+    flex-direction: column;
 }
 
-.container .card {
-    background-image: url("../img/Resident_Evil_4_\(remake\).png");
-    background-size: cover;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    min-height: 150px;
-    height: 180px;
-    text-align: center;
+.terms-container .terms {
+    border: 1px solid var(--font-color);
+    margin: 15px;
+    padding: 10px;
+    text-align: justify;
+    overflow: scroll;
+    max-height: 55vh;
+    max-width: 60vw;
     color: var(--font-color);
+    font-size: large;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.terms-container .terms .educational {
+    color: crimson;
+}
+
+.terms-container .terms p {
+    padding: 5px;
     font-family: var(--font);
 }
 
-.container .card h2 {
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-.container .card .price {
-    color: black;
-    font-weight: bold;
-    font-size: larger;
+.accept-terms {
     color: var(--font-color);
+    border: 1px solid var(--font-color);
+    margin: 15px;
+    padding: 10px;
+    font-size: large;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container .card .description {
-    font-size: 14px;
-    font-weight: 600;
-    margin: 5px;
-}
-
-.container button {
+.accept-terms button {
     background-color: blue;
     color: white;
     padding: 10px;
     border: none;
+    width: 100px;
     border-radius: 5px;
     cursor: pointer;
-    font-family: var(--font);
+    font-size: large;
 }
-
-.container button:hover {
+.accept-terms button:hover {
     transition: all 0.5s ease-out;
     background-color: crimson;
     border: 1px solid white;
-    color: white;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    width: 50%;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.modal-content form {
-    display: flex;
-    flex-direction: column;
-}
-
-.modal-content input,
-.modal-content textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.modal-content button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.modal-content button:hover {
-    background-color: #45a049;
-}
-
-.close {
-    float: right;
-    font-size: 24px;
-    cursor: pointer;
+    color: white;    
 }
 
 footer {

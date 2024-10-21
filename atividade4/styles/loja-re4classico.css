@@ -49,6 +49,7 @@ header {
 }
 
 .title-container .title {
+    font-family: var(--font);
     color: var(--font-color);
 }
 
@@ -71,6 +72,7 @@ header {
     width: 200px;
     text-align: center;
     color: var(--font-color);
+    font-family: var(--font);
 }
 
 .container .card h2 {
@@ -92,16 +94,21 @@ header {
 }
 
 .container button {
-    background-color: #28a745;
+    background-color: blue;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: var(--font);
 }
 
 .container button:hover {
-    background-color: #218838;
+    transition: all 0.5s ease-out;
+    background-color: crimson;
+    border: 1px solid white;
+    color: white;
+
 }
 
 .modal {

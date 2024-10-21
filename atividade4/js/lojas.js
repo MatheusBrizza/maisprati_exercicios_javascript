@@ -7,13 +7,13 @@ function closeForm() {
 }
 
 (function() {
-    emailjs.init('B0YI0Mpgp_EGFwqYG'); // Substitua 'SEU_USER_ID' pelo seu User ID real
+    emailjs.init('B0YI0Mpgp_EGFwqYG');
 })();
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault();
 
-    // Validação
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone').value.trim();
@@ -24,7 +24,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         return;
     }
 
-    // Envio para EmailJS
     emailjs.send('service_9oluir4', 'template_jir70xl', {
         name: name,
         email: email,
@@ -35,7 +34,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         console.log('Sucesso!', response.status, response.text);
         alert('Mensagem enviada com sucesso!');
         document.getElementById('contact-form').reset();
-        closeForm(); // Fecha a modal após o envio
+        closeForm();
     }, function(error) {
         console.log('Erro ao enviar:', error);
         alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');

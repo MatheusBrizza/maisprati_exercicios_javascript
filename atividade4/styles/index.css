@@ -121,6 +121,9 @@ header {
     color: white;
     text-decoration: none;
 }
+
+
+
 .banner .left .features .pricing .content .genre {
     margin-bottom: 10px;
     max-width: 500px;
@@ -196,7 +199,7 @@ header {
     color: var(--font-color);
 }
 
-.banner .right .info-container .information{
+.banner .right .info-container .information {
     list-style-type: none;
     margin-bottom: 10px;
 }
@@ -207,6 +210,15 @@ header {
     border: 1px solid white;
     color: white;
     text-decoration: none;
+}
+
+.banner .right .info-container a:hover,
+.banner .left .features .pricing .content a:hover,
+.banner .right .rating .score-content a:hover {
+    transition: all 0.5s ease-out;
+    background-color: crimson;
+    border: 1px solid white;
+    color: white;
 }
 
 .banner .right .trailer {
