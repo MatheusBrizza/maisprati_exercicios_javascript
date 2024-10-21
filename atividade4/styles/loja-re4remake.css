@@ -43,6 +43,11 @@ header {
     color: var(--font-color);
 }
 
+.flex-nav-container .nav-buttons li a:hover {
+    transition: all 0.5s ease-out;
+    color: crimson;
+}
+
 .title-container {
     display: flex;
     justify-content: center;
@@ -196,9 +201,18 @@ footer {
     color: var(--font-color);
 }
 
+.footer-container .social-media li a i:hover {
+    transition: all 0.5s ease-out;
+    color: crimson;
+}
+
 .footer-container .terms-policy a {
     text-decoration: none;
     font-family: var(--font);
     color: var(--font-color);
     padding: 10px;
+}
+.footer-container .terms-policy a:hover {
+    transition: all 0.5s ease-out;
+    color: crimson;
 }
