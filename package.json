@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "metacritic": "^0.0.2",
     "prompt-sync": "^4.2.0"
   }
 }
