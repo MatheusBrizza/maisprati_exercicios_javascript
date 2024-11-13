@@ -17,15 +17,21 @@ function atualizarListaTarefas() {
         novaTarefa.innerHTML = `
             <span contenteditable="false">${tarefa}</span>
             <button onclick="editarTarefa(${index})">Editar</button>
+            <button onclick="deletarTarefa(${index})">Excluir</button>
         `;
         listaTarefas.appendChild(novaTarefa);
     });
 }
 
 function editarTarefa(index) {
-    const novoTexto = prompt("Edite a tarefa:", tarefas[index]);
+    const novoTexto = prompt("Editando a tarefa:", tarefas[index]);
     if (novoTexto !== null && novoTexto.trim() !== '') {
         tarefas[index] = novoTexto.trim(); 
         atualizarListaTarefas();
     }
+}
+
+function deletarTarefa(index) {
+    tarefas.splice(index, 1);
+    atualizarListaTarefas();
 }
