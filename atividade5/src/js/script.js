@@ -1,12 +1,7 @@
-let tarefas = []
+let tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
 
-function adicionarTarefa() {
-    const inputTarefa = document.getElementById('input-tarefa');
-    const tarefa = inputTarefa.value.trim();
-    if (tarefa === '') return;
-    tarefas.push(tarefa)
-    atualizarListaTarefas();
-    inputTarefa.value = '';
+function salvarTarefas() {
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
 }
 
 function atualizarListaTarefas() {
@@ -23,15 +18,29 @@ function atualizarListaTarefas() {
     });
 }
 
+function adicionarTarefa() {
+    const inputTarefa = document.getElementById('input-tarefa');
+    const tarefa = inputTarefa.value.trim();
+    if (tarefa === '') return;
+    tarefas.push(tarefa)
+    salvarTarefas()
+    atualizarListaTarefas();
+    inputTarefa.value = '';
+}
+
 function editarTarefa(index) {
     const novoTexto = prompt("Editando a tarefa:", tarefas[index]);
     if (novoTexto !== null && novoTexto.trim() !== '') {
-        tarefas[index] = novoTexto.trim(); 
+        tarefas[index] = novoTexto.trim();
+        salvarTarefas()
         atualizarListaTarefas();
     }
 }
 
 function deletarTarefa(index) {
     tarefas.splice(index, 1);
+    salvarTarefas()
     atualizarListaTarefas();
 }
+
+document.addEventListener('DOMContentLoaded', atualizarListaTarefas);
