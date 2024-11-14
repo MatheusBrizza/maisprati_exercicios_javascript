@@ -9,10 +9,11 @@ function atualizarListaTarefas() {
     listaTarefas.innerHTML = '';
     tarefas.forEach((tarefa, index) => {
         const novaTarefa = document.createElement('li');
+        novaTarefa.className = 'list-group-item d-flex justify-content-between align-items-center';
         novaTarefa.innerHTML = `
-            <span contenteditable="false">${tarefa}</span>
-            <button onclick="editarTarefa(${index})">Editar</button>
-            <button onclick="deletarTarefa(${index})">Excluir</button>
+            <span class="task-text" contenteditable="false">${tarefa}</span>
+            <button class="btn btn-warning btn-sm me-2" onclick="editarTarefa(${index})">Editar</button>
+            <button class="btn btn-danger btn-sm" onclick="deletarTarefa(${index})">Excluir</button>
         `;
         listaTarefas.appendChild(novaTarefa);
     });
