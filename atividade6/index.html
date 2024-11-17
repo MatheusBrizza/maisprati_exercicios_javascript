@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="./src/css/index.css">
     <!-- Link para o arquivo CSS local com os estilos da página -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
     <!-- Link para a folha de estilo do Swiper, uma biblioteca para carrosséis -->
     <title>Gaming Website Landing Page</title>
     <!-- Define o título da página que aparece na aba do navegador -->
@@ -59,11 +65,11 @@
         </div>
     </header>
 
-    <div class="swiper">
+    <section class="swiper">
         <!-- Contêiner principal do Swiper, o carrossel -->
         <div class="swiper-wrapper">
             <!-- Wrapper que envolve os slides -->
-            <div class="swiper-slide" id="slide-1">
+            <article class="swiper-slide" id="slide-1">
                 <!-- Primeiro slide do carrossel -->
                 <img src="./src/images/super_mario_odyssey_dinosaur_4k.jpeg" alt="Banner do Super Mario Odyssey">
                 <!-- Imagem do banner do jogo Super Mario Odyssey -->
@@ -72,7 +78,7 @@
                 <!-- Div para uma camada de fundo -->
                 <div class="banner">
                     <!-- Banner de conteúdo adicional -->
-                    <div class="left">
+                    <aside class="left">
                         <!-- Seção à esquerda do banner -->
                         <div class="features">
                             <!-- Div para exibir as características do jogo -->
@@ -82,17 +88,59 @@
                                 <!-- Nota de avaliação -->
                                 <div class="content">
                                     <!-- Conteúdo relacionado à avaliação -->
-                                    <span class="subtitle">M E T A S C O R E</span>
+                                    <span class="subtitle" aria-label="Metascore">M E T A S C O R E</span>
                                     <!-- Subtítulo com a palavra "Metascore" -->
                                     <h4>Ótimo</h4>
                                     <!-- Classificação "Ótimo" -->
-                                    <span>Descrição do Jogo Mario Odyssey</span>
+                                    <span>Aujude Mario a salvar Peach!</span>
                                     <!-- Descrição do jogo -->
                                 </div>
                             </div>
                             <div class="pricing">
                                 <!-- Seção para exibir informações de compra -->
-                                <a href=""></a>
+                                <button class="buy-button" id="openModal"
+                                    aria-label="Abrir modal de compra">
+                                    <svg width="45px" height="45px" viewBox="0 0 32 32" version="1.1" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+
+                                        <title>plus-circle</title>
+                                        <desc>Created with Sketch Beta.</desc>
+                                        <defs>
+
+                                        </defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                            sketch:type="MSPage">
+                                            <g id="Icon-Set" sketch:type="MSLayerGroup"
+                                                transform="translate(-464.000000, -1087.000000)" fill="#ffffff">
+                                                <path
+                                                    d="M480,1117 C472.268,1117 466,1110.73 466,1103 C466,1095.27 472.268,1089 480,1089 C487.732,1089 494,1095.27 494,1103 C494,1110.73 487.732,1117 480,1117 L480,1117 Z M480,1087 C471.163,1087 464,1094.16 464,1103 C464,1111.84 471.163,1119 480,1119 C488.837,1119 496,1111.84 496,1103 C496,1094.16 488.837,1087 480,1087 L480,1087 Z M486,1102 L481,1102 L481,1097 C481,1096.45 480.553,1096 480,1096 C479.447,1096 479,1096.45 479,1097 L479,1102 L474,1102 C473.447,1102 473,1102.45 473,1103 C473,1103.55 473.447,1104 474,1104 L479,1104 L479,1109 C479,1109.55 479.447,1110 480,1110 C480.553,1110 481,1109.55 481,1109 L481,1104 L486,1104 C486.553,1104 487,1103.55 487,1103 C487,1102.45 486.553,1102 486,1102 L486,1102 Z"
+                                                    id="plus-circle" sketch:type="MSShapeGroup">
+
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <div id="modal" class="modal" role="dialog" aria-labelledby="modalTitle">
+                                    <div class="modal-content">
+                                        <button id="closeModal" class="close" aria-label="Fechar modal">&times;</button>
+                                        <h2 id="modalTitle">Checkout</h2>
+                                        <form id="purchaseForm">
+                                            <label for="name">Nome:</label>
+                                            <input type="text" id="name" name="name">
+
+                                            <label for="email">E-mail:</label>
+                                            <input type="email" id="email" name="email">
+
+                                            <label for="password">Senha:</label>
+                                            <input type="password" id="password" name="password">
+
+                                            <button type="submit" class="btn">Comprar agora</button>
+                                        </form>
+                                        <p id="message" style="display: none;"></p>
+                                    </div>
+                                </div>
                                 <!-- Link vazio para a compra do jogo -->
                                 <div class="content">
                                     <!-- Conteúdo relacionado ao preço -->
@@ -100,27 +148,29 @@
                                     <!-- Título do jogo -->
                                     <h4>COMPRE AGORA</h4>
                                     <!-- Chamada para compra -->
-                                    <span>Plataforma, Aventura, Ação</span>
+                                    <span>Disponibilidade: digital, física</span>
                                     <!-- Categorias do jogo -->
                                 </div>
                             </div>
                         </div>
                         <!-- <img class="title-logo" src="./src/images/mario-odyssey-logo.png" alt="Mario Odyssey logo"> -->
-                        <h1>Mario</h1>
+                        <h1>Super Mario Odyssey</h1>
                         <!-- Título "Mario" -->
-                    </div>
+                    </aside>
                     <img class="character-img" src="./src/images/mario.png" alt="Mario">
                     <!-- Imagem do personagem Mario -->
-                    <div class="right">
+                    <aside class="right">
                         <!-- Seção à direita do banner -->
                         <ul class="description">
                             <!-- Lista de descrição do jogo -->
                             <li>
-                                <p>27 de outubro 2017</p>
+                                Data de Lançamento
+                                <p>27 de outubro de 2017</p>
                                 <!-- Data de lançamento do jogo -->
                             </li>
                             <li>
-                                <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                <h4>Gênero</h4>
+                                <p>Plataforma, Aventura, Ação</p>
                                 <!-- Modos de jogo disponíveis -->
                             </li>
                         </ul>
@@ -133,10 +183,10 @@
                                 title="Super Mario Odyssey Trailer" allowfullscreen></iframe>
                             <!-- Frame do YouTube com o trailer do Super Mario Odyssey -->
                         </div>
-                    </div>
+                    </aside>
                 </div>
-            </div>
-            <div class="swiper-slide" id="slide-2">
+            </article>
+            <article class="swiper-slide" id="slide-2">
                 <!-- Segundo slide do carrossel -->
                 <img src="./src/images/pokemon-legends-arceus.jpeg" alt="Banner do Pokemon Legends Arceus">
                 <!-- Imagem do banner do jogo Pokemon Legends Arceus -->
@@ -146,7 +196,7 @@
                 <div class="banner">
                     <!-- Banner de conteúdo adicional -->
 
-                    <div class="left">
+                    <aside class="left">
                         <!-- Seção à esquerda do banner -->
                         <div class="features">
                             <!-- Div para exibir as características do jogo -->
@@ -156,7 +206,7 @@
                                 <!-- Nota de avaliação -->
                                 <div class="content">
                                     <!-- Conteúdo relacionado à avaliação -->
-                                    <span class="subtitle">M E T A S C O R E</span>
+                                    <span class="subtitle" aria-label="Metascore">M E T A S C O R E</span>
                                     <!-- Subtítulo com a palavra "Metascore" -->
                                     <h4>Bom</h4>
                                     <!-- Classificação "Bom" -->
@@ -166,7 +216,49 @@
                             </div>
                             <div class="pricing">
                                 <!-- Seção para exibir informações de compra -->
-                                <a href="" target="_blank"></a>
+                                <button class="buy-button" id="openModal"
+                                    aria-label="Abrir modal de compra">
+                                    <svg width="45px" height="45px" viewBox="0 0 32 32" version="1.1" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+
+                                        <title>plus-circle</title>
+                                        <desc>Created with Sketch Beta.</desc>
+                                        <defs>
+
+                                        </defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                            sketch:type="MSPage">
+                                            <g id="Icon-Set" sketch:type="MSLayerGroup"
+                                                transform="translate(-464.000000, -1087.000000)" fill="#ffffff">
+                                                <path
+                                                    d="M480,1117 C472.268,1117 466,1110.73 466,1103 C466,1095.27 472.268,1089 480,1089 C487.732,1089 494,1095.27 494,1103 C494,1110.73 487.732,1117 480,1117 L480,1117 Z M480,1087 C471.163,1087 464,1094.16 464,1103 C464,1111.84 471.163,1119 480,1119 C488.837,1119 496,1111.84 496,1103 C496,1094.16 488.837,1087 480,1087 L480,1087 Z M486,1102 L481,1102 L481,1097 C481,1096.45 480.553,1096 480,1096 C479.447,1096 479,1096.45 479,1097 L479,1102 L474,1102 C473.447,1102 473,1102.45 473,1103 C473,1103.55 473.447,1104 474,1104 L479,1104 L479,1109 C479,1109.55 479.447,1110 480,1110 C480.553,1110 481,1109.55 481,1109 L481,1104 L486,1104 C486.553,1104 487,1103.55 487,1103 C487,1102.45 486.553,1102 486,1102 L486,1102 Z"
+                                                    id="plus-circle" sketch:type="MSShapeGroup">
+
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <div id="modal" class="modal" role="dialog" aria-labelledby="modalTitle">
+                                    <div class="modal-content">
+                                        <button id="closeModal" class="close" aria-label="Fechar modal">&times;</button>
+                                        <h2 id="modalTitle">Checkout</h2>
+                                        <form id="purchaseForm">
+                                            <label for="name">Nome:</label>
+                                            <input type="text" id="name" name="name">
+
+                                            <label for="email">E-mail:</label>
+                                            <input type="email" id="email" name="email">
+
+                                            <label for="password">Senha:</label>
+                                            <input type="password" id="password" name="password">
+
+                                            <button type="submit" class="btn">Comprar agora</button>
+                                        </form>
+                                        <p id="message" style="display: none;"></p>
+                                    </div>
+                                </div>
                                 <!-- Link vazio para a compra do jogo -->
                                 <div class="content">
                                     <!-- Conteúdo relacionado ao preço -->
@@ -174,17 +266,17 @@
                                     <!-- Título do jogo -->
                                     <h4>COMPRE AGORA</h4>
                                     <!-- Chamada para compra -->
-                                    <span>Ação, RPG</span>
+                                    <span>Disponibilidade: digital</span>
                                     <!-- Categorias do jogo -->
                                 </div>
                             </div>
                         </div>
                         <h1 class="pokemon-title">Pokemon Legends: Arceus</h1>
                         <!-- Título "Pokemon" -->
-                    </div>
+                    </aside>
                     <img src="./src/images/red.png" alt="Treinador Pokemon Red">
                     <!-- Imagem do treinador Pokemon Red -->
-                    <div class="right">
+                    <aside class="right">
                         <!-- Seção à direita do banner -->
                         <ul class="description">
                             <!-- Lista de descrição do jogo -->
@@ -194,8 +286,8 @@
                                 <!-- Data de lançamento do jogo -->
                             </li>
                             <li>
-                                <h4>Modos de jogo</h4>
-                                <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                <h4>Gênero</h4>
+                                <p>Aventura, Ação, RPG</p>
                                 <!-- Modos de jogo disponíveis -->
                             </li>
                         </ul>
@@ -208,10 +300,10 @@
                                 title="Pokemon legends arceus trailer" allowfullscreen></iframe>
                             <!-- Frame do YouTube vazio para o trailer do jogo -->
                         </div>
-                    </div>
+                    </aside>
                 </div>
-            </div>
-            <div class="swiper-slide" id="slide-3">
+            </article>
+            <article class="swiper-slide" id="slide-3">
                 <!-- Segundo slide do carrossel -->
                 <img src="./src/images/The-Legend-of-Zelda-Breath-of-the-Wild.jpeg"
                     alt="Banner do Legend of Zelda Breath of the Wild">
@@ -222,7 +314,7 @@
                 <div class="banner">
                     <!-- Banner de conteúdo adicional -->
 
-                    <div class="left">
+                    <aside class="left">
                         <!-- Seção à esquerda do banner -->
                         <div class="features">
                             <!-- Div para exibir as características do jogo -->
@@ -232,7 +324,7 @@
                                 <!-- Nota de avaliação -->
                                 <div class="content">
                                     <!-- Conteúdo relacionado à avaliação -->
-                                    <span class="subtitle">M E T A S C O R E</span>
+                                    <span class="subtitle" aria-label="Metascore">M E T A S C O R E</span>
                                     <!-- Subtítulo com a palavra "Metascore" -->
                                     <h4>Bom</h4>
                                     <!-- Classificação "Bom" -->
@@ -242,7 +334,49 @@
                             </div>
                             <div class="pricing">
                                 <!-- Seção para exibir informações de compra -->
-                                <a href="" target="_blank"></a>
+                                <button class="buy-button" id="openModal"
+                                    aria-label="Abrir modal de compra" disabled>
+                                    <svg width="45px" height="45px" viewBox="0 0 32 32" version="1.1" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+
+                                        <title>plus-circle</title>
+                                        <desc>Created with Sketch Beta.</desc>
+                                        <defs>
+
+                                        </defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                            sketch:type="MSPage">
+                                            <g id="Icon-Set" sketch:type="MSLayerGroup"
+                                                transform="translate(-464.000000, -1087.000000)" fill="#ffffff">
+                                                <path
+                                                    d="M480,1117 C472.268,1117 466,1110.73 466,1103 C466,1095.27 472.268,1089 480,1089 C487.732,1089 494,1095.27 494,1103 C494,1110.73 487.732,1117 480,1117 L480,1117 Z M480,1087 C471.163,1087 464,1094.16 464,1103 C464,1111.84 471.163,1119 480,1119 C488.837,1119 496,1111.84 496,1103 C496,1094.16 488.837,1087 480,1087 L480,1087 Z M486,1102 L481,1102 L481,1097 C481,1096.45 480.553,1096 480,1096 C479.447,1096 479,1096.45 479,1097 L479,1102 L474,1102 C473.447,1102 473,1102.45 473,1103 C473,1103.55 473.447,1104 474,1104 L479,1104 L479,1109 C479,1109.55 479.447,1110 480,1110 C480.553,1110 481,1109.55 481,1109 L481,1104 L486,1104 C486.553,1104 487,1103.55 487,1103 C487,1102.45 486.553,1102 486,1102 L486,1102 Z"
+                                                    id="plus-circle" sketch:type="MSShapeGroup">
+
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <div id="modal" class="modal" role="dialog" aria-labelledby="modalTitle">
+                                    <div class="modal-content">
+                                        <button id="closeModal" class="close" aria-label="Fechar modal">&times;</button>
+                                        <h2 id="modalTitle">Checkout</h2>
+                                        <form id="purchaseForm">
+                                            <label for="name">Nome:</label>
+                                            <input type="text" id="name" name="name">
+
+                                            <label for="email">E-mail:</label>
+                                            <input type="email" id="email" name="email">
+
+                                            <label for="password">Senha:</label>
+                                            <input type="password" id="password" name="password">
+
+                                            <button type="submit" class="btn">Comprar agora</button>
+                                        </form>
+                                        <p id="message" style="display: none;"></p>
+                                    </div>
+                                </div>
                                 <!-- Link vazio para a compra do jogo -->
                                 <div class="content">
                                     <!-- Conteúdo relacionado ao preço -->
@@ -250,17 +384,17 @@
                                     <!-- Título do jogo -->
                                     <h4>COMPRE AGORA</h4>
                                     <!-- Chamada para compra -->
-                                    <span>Ação, RPG</span>
+                                    <span>Disponibilidade: indisponível</span>
                                     <!-- Categorias do jogo -->
                                 </div>
                             </div>
                         </div>
                         <h1 class="zelda-title">Legend of Zelda</h1>
                         <!-- Título "Legend of Zelda" -->
-                    </div>
+                    </aside>
                     <img src="./src/images/link.png" alt="Link breath of the wild">
                     <!-- Imagem do Link -->
-                    <div class="right">
+                    <aside class="right">
                         <!-- Seção à direita do banner -->
                         <ul class="description">
                             <!-- Lista de descrição do jogo -->
@@ -270,8 +404,8 @@
                                 <!-- Data de lançamento do jogo -->
                             </li>
                             <li>
-                                <h4>Modos de jogo</h4>
-                                <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                <h4>Gênero</h4>
+                                <p>Aventura, Ação, Mundo aberto, RPG</p>
                                 <!-- Modos de jogo disponíveis -->
                             </li>
                         </ul>
@@ -284,15 +418,15 @@
                                 title="Legend of zelda breath of the wild trailer" allowfullscreen></iframe>
                             <!-- Frame do YouTube para o trailer do jogo -->
                         </div>
-                    </div>
+                    </aside>
                 </div>
-            </div>
+            </article>
         </div>
         <div class="swiper-button-prev"></div>
         <!-- Botão de navegação para o slide anterior -->
         <div class="swiper-button-next"></div>
         <!-- Botão de navegação para o próximo slide -->
-    </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Script da biblioteca Swiper para o funcionamento do carrossel -->
     <script src="./src/js/app.js"></script>
