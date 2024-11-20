@@ -5,6 +5,7 @@ import TodoList from "./components/TodoList";
 import Timer from "./components/Timer";
 import ListFilter from "./components/ListFilter";
 import RegistrationForm from "./components/RegistrationForm";
+import DataFetch from "./components/DataFetch";
 
 function App() {
   const [selectedExercise, setSelectedExercise] = useState(null);
@@ -16,6 +17,7 @@ function App() {
     Timer: <Timer />,
     ListFilter: <ListFilter />,
     RegistrationForm: <RegistrationForm />,
+    DataFetch: <DataFetch />,
   };
 
   return (
