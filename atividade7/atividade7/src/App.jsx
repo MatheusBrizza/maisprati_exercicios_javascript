@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Counter from "./components/Counter.jsx";
+import BackgroundChanger from "./components/BackgroundChanger";
 
 function App() {
   const [selectedExercise, setSelectedExercise] = useState(null);
 
   const exercises = {
     Counter: <Counter />,
+    BackgroundChanger: <BackgroundChanger />,
   };
 
   return (
