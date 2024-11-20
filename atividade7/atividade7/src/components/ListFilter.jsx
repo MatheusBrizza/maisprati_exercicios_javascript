@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const NameFilter = () => {
   const [filter, setFilter] = useState("");
-  const names = ["Fulano", "Beltrano", "Ciclano", "Lili", "Aline"];
+  const names = ["Aline", "Beltrano", "Ciclano", "Fulano", "Lili"];
 
   const filteredNames = names.filter((name) =>
     name.toLowerCase().includes(filter.toLowerCase())
