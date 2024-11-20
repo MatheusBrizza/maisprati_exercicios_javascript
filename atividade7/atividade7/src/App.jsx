@@ -6,6 +6,7 @@ import Timer from "./components/Timer";
 import ListFilter from "./components/ListFilter";
 import RegistrationForm from "./components/RegistrationForm";
 import DataFetch from "./components/DataFetch";
+import ImageGallery from "./components/ImageGallery";
 
 function App() {
   const [selectedExercise, setSelectedExercise] = useState(null);
@@ -18,6 +19,7 @@ function App() {
     ListFilter: <ListFilter />,
     RegistrationForm: <RegistrationForm />,
     DataFetch: <DataFetch />,
+    ImageGallery: <ImageGallery />,
   };
 
   return (
