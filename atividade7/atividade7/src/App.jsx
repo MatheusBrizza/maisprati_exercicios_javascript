@@ -7,6 +7,7 @@ import ListFilter from "./components/ListFilter";
 import RegistrationForm from "./components/RegistrationForm";
 import DataFetch from "./components/DataFetch";
 import ImageGallery from "./components/ImageGallery";
+import CountdownTimer from "./components/CountdownTimer";
 
 function App() {
   const [selectedExercise, setSelectedExercise] = useState(null);
@@ -20,6 +21,7 @@ function App() {
     RegistrationForm: <RegistrationForm />,
     DataFetch: <DataFetch />,
     ImageGallery: <ImageGallery />,
+    CountdownTimer: <CountdownTimer />,
   };
 
   return (
