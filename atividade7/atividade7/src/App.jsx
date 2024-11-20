@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Counter from "./components/Counter.jsx";
+import Counter from "./components/Counter";
 import BackgroundChanger from "./components/BackgroundChanger";
+import TodoList from "./components/TodoList";
 
 function App() {
   const [selectedExercise, setSelectedExercise] = useState(null);
@@ -8,6 +9,7 @@ function App() {
   const exercises = {
     Counter: <Counter />,
     BackgroundChanger: <BackgroundChanger />,
+    TodoList: <TodoList />,
   };
 
   return (
