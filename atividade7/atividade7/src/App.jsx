@@ -3,6 +3,7 @@ import Counter from "./components/Counter";
 import BackgroundChanger from "./components/BackgroundChanger";
 import TodoList from "./components/TodoList";
 import Timer from "./components/Timer";
+import ListFilter from "./components/ListFilter";
 
 function App() {
   const [selectedExercise, setSelectedExercise] = useState(null);
@@ -12,6 +13,7 @@ function App() {
     BackgroundChanger: <BackgroundChanger />,
     TodoList: <TodoList />,
     Timer: <Timer />,
+    ListFilter: <ListFilter />,
   };
 
   return (
