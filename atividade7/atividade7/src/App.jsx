@@ -4,6 +4,7 @@ import BackgroundChanger from "./components/BackgroundChanger";
 import TodoList from "./components/TodoList";
 import Timer from "./components/Timer";
 import ListFilter from "./components/ListFilter";
+import RegistrationForm from "./components/RegistrationForm";
 
 function App() {
   const [selectedExercise, setSelectedExercise] = useState(null);
@@ -14,6 +15,7 @@ function App() {
     TodoList: <TodoList />,
     Timer: <Timer />,
     ListFilter: <ListFilter />,
+    RegistrationForm: <RegistrationForm />,
   };
 
   return (
