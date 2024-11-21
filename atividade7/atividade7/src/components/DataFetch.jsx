@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 const DataFetch = () => {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState([]); // Estado para armazenar os posts
+  const [loading, setLoading] = useState(true); // Estado para o indicador de carregamento
 
   const fetchData = async () => {
     setLoading(true);
@@ -18,7 +18,7 @@ const DataFetch = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    fetchData(); // Faz a requisição ao carregar o componente
   }, []);
 
   return (

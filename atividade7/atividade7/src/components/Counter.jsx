@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// Hook useState para manter o valor do contador
 const Counter = () => {
   const [count, setCount] = useState(0);
 

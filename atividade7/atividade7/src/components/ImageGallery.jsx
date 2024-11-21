@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const ImageGallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null); // Armazena a imagem selecionada
   const images = [
     "https://via.placeholder.com/150",
     "https://via.placeholder.com/200",
@@ -22,6 +22,7 @@ const ImageGallery = () => {
           />
         ))}
       </div>
+      {/* Renderiza o modal apenas se houver uma imagem selecionada */}
       {selectedImage && (
         <div
           style={{

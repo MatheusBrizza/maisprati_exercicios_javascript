@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 const TodoList = () => {
-  const [tasks, setTasks] = useState([]);
-  const [task, setTask] = useState("");
-  const [filter, setFilter] = useState("all");
+  const [tasks, setTasks] = useState([]); // Lista de tarefas
+  const [task, setTask] = useState(""); // Nova tarefa
+  const [filter, setFilter] = useState("all"); // Filtro de exibição: all, completed, pending
 
   const addTask = () => {
     if (task.trim()) {
       setTasks([...tasks, { text: task, completed: false }]);
-      setTask("");
+      setTask(""); // Limpa o campo
     }
   };
 
@@ -19,7 +19,7 @@ const TodoList = () => {
   };
 
   const filteredTasks = tasks.filter((t) =>
-    filter === "completed" ? t.completed : filter === "pending" ? !t.completed : true
+    filter === "completed" ? t.completed : filter === "pending" ? !t.completed : true // Mostra todas as tarefas se o filtro for "all"
   );
 
   return (
@@ -33,7 +33,7 @@ const TodoList = () => {
       />
       <button onClick={addTask}>Adicionar</button>
       <div>
-        <button onClick={() => setFilter("all")}>Todas</button>
+        <button onClick={() => setFilter("all")}>Todas</button> 
         <button onClick={() => setFilter("completed")}>Concluídas</button>
         <button onClick={() => setFilter("pending")}>Pendentes</button>
       </div>

@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 const RegistrationForm = () => {
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
-  const [welcomeMessage, setWelcomeMessage] = useState("");
+  const [form, setForm] = useState({ name: "", email: "", password: "" }); // Armazena os dados do formulário
+  const [welcomeMessage, setWelcomeMessage] = useState(""); // Mensagem de boas-vindas
 
   const handleChange = (e) => {
+    // Atualiza os campos do formulário
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
@@ -12,6 +13,7 @@ const RegistrationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (form.name && form.email && form.password) {
+      // Exibe a mensagem de boas-vindas se todos os campos estiverem preenchidos
       setWelcomeMessage(`Bem-vindo, ${form.name}!`);
     } else {
       alert("Por favor, preencha todos os campos.");
